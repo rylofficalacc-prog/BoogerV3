@@ -2,7 +2,8 @@ name: Build Booger Client
 
 on:
 push:
-branches: [ "main" ]
+branches:
+- main
 
 jobs:
 build:
@@ -16,7 +17,7 @@ steps:
   - name: Set up Java 17
     uses: actions/setup-java@v3
     with:
-      distribution: 'temurin'
+      distribution: temurin
       java-version: '17'
 
   - name: Make Gradle executable
@@ -29,5 +30,5 @@ steps:
     uses: actions/upload-artifact@v3
     with:
       name: booger-client
-      path: **/build/libs/*.jar
+      path: '**/build/libs/*.jar'
 ```
