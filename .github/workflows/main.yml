@@ -17,9 +17,9 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - run: chmod +x gradlew
+      - run: chmod +x client/gradlew
 
-      - run: ./gradlew build
+      - run: cd client && ./gradlew build
 
       - uses: actions/upload-artifact@v4
         with:
